@@ -1,53 +1,29 @@
-'use client'
+import Image from "next/image";
 
-import Image from "next/link";
-import React from "react";
-
-export default function Card() {
-  const games = [
-    {
-      id: 1,
-      image: "joko",
-      title: "telo",
-      genre: "lol",
-      price: "Rp. 16.000",
-      discount: "Rp. 14.000",
-    },
-    {
-      id: 2,
-      image: "joko",
-      title: "telo",
-      genre: "lol",
-      price: "Rp. 16.000",
-      discount: "Rp. 14.000",
-    },
-    {
-      id: 3,
-      image: "joko",
-      title: "telo",
-      genre: "lol",
-      price: "Rp. 16.000",
-      discount: "Rp. 14.000",
-    },
-    {
-      id: 4,
-      image: "joko",
-      title: "telo",
-      genre: "lol",
-      price: "Rp. 16.000",
-      discount: "Rp. 14.000",
-    },
-  ];
-
-  const cardList = games.map((game) => (
-    <div
-      className="flex flex-col gap-3 rounded-lg font-fireSans"
-      key={game.id}
-    >
-      <p>{game.genre}</p>
-      <h2>{game.title}</h2>
-      <p>{game.price}</p>
-      <p>{game.discount}</p>
+const Cards = ({ data }) => {
+  return (
+    <div className="flex flex-col w-[375px] gap-y-4 rounded-lg font-fireSans bg-gray-400 hover:shadow-[6px_-4px_8px_3px_rgba(130,114,114,0.75)] hover:scale-[1.1] transition-transform cursor-pointer">
+      <Image
+        className="w-[400px] h-[240px] object-cover rounded-lg"
+        src={data.image}
+        alt={data.title}
+        width={720}
+        height={1280}
+      />
+      <div className="flex flex-col px-4 py-2">
+        <div className="ml-2 pl-2 w-[100px] font-kanit bg-slate-500">
+          <p className="text-white py-3 font-bold text-[10px]">{data.genre}</p>
+        </div>
+        <h2 className="font-bold text-white pl-2 pb-3 text-[28px] font-kanit">
+          {data.title}
+        </h2>
+        <div className="bg-blue-500 rounded-lg pl-5 ml-[245px] w-[110px] font-[50px]">
+          <p className="text-white text-[13px] line-through">Rp.{data.price}</p>
+          <p className="text-white text-[13px]">Rp.{data.discount}</p>
+        </div>
+      </div>
     </div>
-  ));
+  );
 };
+
+export default Cards;
