@@ -12,14 +12,22 @@ function CarouselCard(item) {
   return (
     <swiper-slide className="flex" key={item.id}>
       <Image
-        className="flex justify-center w-full h-[720px] align-middle object-cover"
+        className="flex justify-center w-full h-[90vh] align-middle object-cover"
         src={item.image}
         width={1280}
         height={720}
         alt={item.title}
       />
-      <div className="absolute top-[140px] left-[80px] right-[80px] font-overpass text-center text-[#85eff7]">
-        <h2 className="text-[69px]">{item.title}</h2>
+      <div className="absolute bg-[#0000002d] top-[140px] left-[80px] right-[80px] font-overpass text-center text-[#85eff7]">
+        <div className="flex justify-center items-center">
+          <Image
+            className="w-[320px]"
+            src={item.subImage}
+            width={720}
+            height={480}
+            alt={item.title}
+          />
+        </div>
         <p className="text-[20px] pb-7">{item.desc}</p>
         <button className="bg-blue-600 rounded-lg py-4 px-2">
           <Link href="#">{item.button}</Link>
@@ -48,7 +56,7 @@ export default function HeroCarousel() {
   }, []);
 
   return (
-    <div className="min-h-[90vh] bg-yellow-200">
+    <div className="min-h-[90vh] bg-yellow-200 mt-[-80px]">
       <div className={!domIsReady ? "hidden" : ""}>
         <swiper-container
           ref={swiperElRef}

@@ -10,11 +10,11 @@ const Cards = ({ data }) => {
         width={720}
         height={1280}
       />
-      <div className="flex flex-col px-2 py-2">
+      <div className="flex flex-col px-1 py-2">
         <div className="ml-2 pl-2 w-[100px] font-kanit bg-slate-500">
           <p className="text-white py-3 font-bold text-[10px]">{data.genre}</p>
         </div>
-        <div className="flex w-[200px] py-2 justify-between text-[12px]">
+        <div className="flex w-[280px] py-2 justify-between text-[12px]">
           <h2 className="font-bold text-white pl-2 p-1 font-kanit">
             {data.title}
           </h2>

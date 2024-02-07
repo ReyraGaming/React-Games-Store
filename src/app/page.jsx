@@ -1,7 +1,6 @@
 import Most from "./components/most";
 import Populars from "./components/populars";
 import HeroCarousel from "./components/hero-carousel";
-import Genre from './components/genre'
 import Link from "next/link";
 
 export default function Home() {
@@ -31,11 +30,6 @@ export default function Home() {
           </button>
         </div>
         <Most />
-      </section>
-      <section className="bg-gradient-to-l from-[#3546dd] to-[#372270] px-10 py-4 font-overpass text-center">
-        <p className="text-md text-[#e69215] font-bold">Category</p>
-        <h2 className="text-center text-4xl font-bold py-4">Category</h2>
-        <Genre />
       </section>
     </>
   );
