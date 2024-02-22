@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-gradient-to-r from-[#367beb] rounded-b-full to-[#2060c7] flex justify-around items-center px-10 py-4 font-overpass relative z-50">
+    <nav className="bg-gradient-to-r from-[#4d73af] rounded-b-[37px] to-[#3c5b8d] flex justify-around items-center px-10 py-4 font-overpass relative z-50">
       <Link href="/" className="cursor-pointer">
         <p className="text-3xl font-bold">
           Game<span className="text-blue-700">S</span>
