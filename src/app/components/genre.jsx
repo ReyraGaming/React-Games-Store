@@ -3,8 +3,10 @@
 import { useState } from "react";
 import most from "../data/data_games";
 import Card from "./card_explore";
+import Link from "next/link"
 
 const Genre = () => {
+  const slug = 'detail'
   const [filtered, setFiltered] = useState(most);
   const [choose, setChoose] = useState("All");
 
@@ -40,7 +42,9 @@ const Genre = () => {
       </div>
       <div className="grid grid-cols-4 gap-8 py-3">
         {filtered.map((item, index) => (
-          <Card key={index} data={item} />
+          <Link key={index} href={`./explore/${slug}`}>
+            <Card key={index} data={item} />
+          </Link>
         ))}
       </div>
     </div>

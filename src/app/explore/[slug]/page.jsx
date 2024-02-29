@@ -5,7 +5,7 @@ export default function Details() {
   return (
     <>
       <Desc />
-      <REQ />
+      <REQ  />
     </>
   );
 }

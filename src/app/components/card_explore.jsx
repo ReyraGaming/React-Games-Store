@@ -14,7 +14,7 @@ const Cards = ({ data }) => {
         <div className="ml-2 pl-2 w-[100px] font-kanit bg-slate-500">
           <p className="text-white py-3 font-bold text-[10px]">{data.genre}</p>
         </div>
-        <div className="flex w-[280px] py-2 justify-between text-[12px]">
+        <div className="flex w-[251px] py-2 justify-between text-[12px]">
           <h2 className="font-bold text-white pl-2 p-1 font-kanit">
             {data.title}
           </h2>
