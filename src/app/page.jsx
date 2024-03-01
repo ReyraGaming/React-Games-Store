@@ -24,7 +24,7 @@ export default function Home() {
         <div className="flex flex-row py-4 font-bold justify-between">
           <h1 className="text-4xl">Most Played Games</h1>
           <button className="bg-[#f0663b] py-2 px-2 rounded-lg hover:bg-[#421f14] hover:text-white">
-            <Link href="#" className="font-overpass">
+            <Link href="/explore" className="font-overpass">
               View All
             </Link>
           </button>
