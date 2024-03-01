@@ -1,5 +1,6 @@
 import Explore from "../explore/page";
 import Link from "next/link";
+import Login from './login'
 
 export default function Navbar() {
   return (
@@ -28,17 +29,12 @@ export default function Navbar() {
         <Link href="#contact" className="hover:text-white">
           Contact
         </Link>
+        <Login />
         <Link
           href="#"
           className="bg-[#979fbd] px-4 py-1 rounded-lg hover:bg-[#54abf7]"
         >
-          Sign In
-        </Link>
-        <Link
-          href="#"
-          className="bg-[#979fbd] px-4 py-1 rounded-lg hover:bg-[#54abf7]"
-        >
-          Sign Out
+          Sign Up
         </Link>
       </div>
     </nav>
